@@ -1,0 +1,15 @@
+# UniFi Region Blocker Configuration
+# Copy this file to config.yaml and fill in your values.
+# Alternatively, use environment variables (shown in ${VAR} format).
+
+unifi:
+  host: "https://10.5.22.1"
+  username: "programmatic"
+  password: "${UNIFI_PASSWORD}"
+  site: "default"
+  skip_tls_verify: true  # Set to true for self-signed certificates
+
+github:
+  repo: "mattsblocklist/tae"
+  token: "${GITHUB_TOKEN}"
+

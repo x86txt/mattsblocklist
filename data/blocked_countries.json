@@ -1,0 +1,695 @@
+{
+  "name": "UniFi Region Blocking Country List",
+  "version": "1.0.0",
+  "description": "Aggregated list of countries subject to sanctions, export controls, or other restrictions from multiple authoritative sources. This list is intended for use with UniFi Network's Region Blocking (GeoIP Filtering) feature to block traffic from these countries.",
+  "last_modified": "2025-12-27T12:49:05.379515-05:00",
+  "timestamp": "2025-12-27T12:49:05.379466-05:00",
+  "total_codes": 49,
+  "countries": [
+    {
+      "alpha2": "AF",
+      "name": "Afghanistan",
+      "sources": [
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Afghanistan",
+        "Afghanistan"
+      ]
+    },
+    {
+      "alpha2": "AO",
+      "name": "Angola",
+      "sources": [
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Angola"
+      ]
+    },
+    {
+      "alpha2": "BA",
+      "name": "Bosnia and Herzegovina",
+      "sources": [
+        "UK Sanctions List"
+      ],
+      "raw_tokens": [
+        "Bosnia"
+      ]
+    },
+    {
+      "alpha2": "BF",
+      "name": "Burkina Faso",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Burkina Faso"
+      ]
+    },
+    {
+      "alpha2": "BG",
+      "name": "Bulgaria",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Bulgaria"
+      ]
+    },
+    {
+      "alpha2": "BI",
+      "name": "Burundi",
+      "sources": [
+        "UK Sanctions List"
+      ],
+      "raw_tokens": [
+        "Burundi"
+      ]
+    },
+    {
+      "alpha2": "BY",
+      "name": "Belarus",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Belarus",
+        "Belarus",
+        "Belarus"
+      ]
+    },
+    {
+      "alpha2": "CD",
+      "name": "Democratic Republic of the Congo",
+      "sources": [
+        "EU Sanctions List",
+        "FATF Grey List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Democratic Republic of the Congo",
+        "Democratic Republic of the Congo",
+        "Democratic Republic of the Congo",
+        "Democratic Republic of the Congo",
+        "Democratic Republic of the Congo"
+      ]
+    },
+    {
+      "alpha2": "CF",
+      "name": "Central African Republic",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Central African Republic",
+        "Central African Republic",
+        "Central African Republic",
+        "Central African Republic"
+      ]
+    },
+    {
+      "alpha2": "CG",
+      "name": "Congo",
+      "sources": [
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Congo",
+        "Congo",
+        "Congo"
+      ]
+    },
+    {
+      "alpha2": "CM",
+      "name": "Cameroon",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Cameroon"
+      ]
+    },
+    {
+      "alpha2": "CU",
+      "name": "Cuba",
+      "sources": [
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Cuba"
+      ]
+    },
+    {
+      "alpha2": "ER",
+      "name": "Eritrea",
+      "sources": [
+        "EU Sanctions List",
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Eritrea",
+        "Eritrea"
+      ]
+    },
+    {
+      "alpha2": "ET",
+      "name": "Ethiopia",
+      "sources": [
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Ethiopia",
+        "Ethiopia"
+      ]
+    },
+    {
+      "alpha2": "GN",
+      "name": "Guinea",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Guinea",
+        "Guinea",
+        "Guinea"
+      ]
+    },
+    {
+      "alpha2": "GW",
+      "name": "Guinea-Bissau",
+      "sources": [
+        "UK Sanctions List",
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Guinea-Bissau",
+        "Guinea-Bissau"
+      ]
+    },
+    {
+      "alpha2": "HR",
+      "name": "Croatia",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Croatia"
+      ]
+    },
+    {
+      "alpha2": "HT",
+      "name": "Haiti",
+      "sources": [
+        "FATF Grey List",
+        "UK Sanctions List",
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Haiti",
+        "Haiti",
+        "Haiti"
+      ]
+    },
+    {
+      "alpha2": "IQ",
+      "name": "Iraq",
+      "sources": [
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Iraq",
+        "Iraq",
+        "Iraq"
+      ]
+    },
+    {
+      "alpha2": "IR",
+      "name": "Iran",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Iran",
+        "Iran",
+        "Iran",
+        "Iran"
+      ]
+    },
+    {
+      "alpha2": "KE",
+      "name": "Kenya",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Kenya"
+      ]
+    },
+    {
+      "alpha2": "KP",
+      "name": "North Korea",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "North Korea",
+        "DPRK",
+        "DPRK",
+        "North Korea"
+      ]
+    },
+    {
+      "alpha2": "LB",
+      "name": "Lebanon",
+      "sources": [
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Lebanon",
+        "Lebanon",
+        "Lebanon"
+      ]
+    },
+    {
+      "alpha2": "LR",
+      "name": "Liberia",
+      "sources": [
+        "UK Sanctions List",
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Liberia",
+        "Liberia"
+      ]
+    },
+    {
+      "alpha2": "LY",
+      "name": "Libya",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Libya",
+        "Libya",
+        "Libya",
+        "Libya"
+      ]
+    },
+    {
+      "alpha2": "MC",
+      "name": "Monaco",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Monaco"
+      ]
+    },
+    {
+      "alpha2": "ML",
+      "name": "Mali",
+      "sources": [
+        "EU Sanctions List",
+        "FATF Grey List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Mali",
+        "Mali",
+        "Mali",
+        "Mali",
+        "Mali"
+      ]
+    },
+    {
+      "alpha2": "MM",
+      "name": "Myanmar",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Myanmar",
+        "Myanmar",
+        "Burma",
+        "Burma"
+      ]
+    },
+    {
+      "alpha2": "MV",
+      "name": "Maldives",
+      "sources": [
+        "UK Sanctions List"
+      ],
+      "raw_tokens": [
+        "Maldives"
+      ]
+    },
+    {
+      "alpha2": "MZ",
+      "name": "Mozambique",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Mozambique"
+      ]
+    },
+    {
+      "alpha2": "NA",
+      "name": "Namibia",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Namibia"
+      ]
+    },
+    {
+      "alpha2": "NG",
+      "name": "Nigeria",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Nigeria"
+      ]
+    },
+    {
+      "alpha2": "NI",
+      "name": "Nicaragua",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Nicaragua",
+        "Nicaragua",
+        "Nicaragua"
+      ]
+    },
+    {
+      "alpha2": "PH",
+      "name": "Philippines",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Philippines"
+      ]
+    },
+    {
+      "alpha2": "RU",
+      "name": "Russia",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Russia",
+        "Russia",
+        "Russia"
+      ]
+    },
+    {
+      "alpha2": "RW",
+      "name": "Rwanda",
+      "sources": [
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Rwanda"
+      ]
+    },
+    {
+      "alpha2": "SD",
+      "name": "Sudan",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Sudan",
+        "Sudan",
+        "Sudan",
+        "Sudan"
+      ]
+    },
+    {
+      "alpha2": "SL",
+      "name": "Sierra Leone",
+      "sources": [
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "Sierra Leone"
+      ]
+    },
+    {
+      "alpha2": "SN",
+      "name": "Senegal",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Senegal"
+      ]
+    },
+    {
+      "alpha2": "SO",
+      "name": "Somalia",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Somalia",
+        "Somalia",
+        "Somalia",
+        "Somalia"
+      ]
+    },
+    {
+      "alpha2": "SS",
+      "name": "South Sudan",
+      "sources": [
+        "EU Sanctions List",
+        "FATF Grey List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "South Sudan",
+        "South Sudan",
+        "South Sudan",
+        "South Sudan",
+        "South Sudan"
+      ]
+    },
+    {
+      "alpha2": "SY",
+      "name": "Syria",
+      "sources": [
+        "EU Sanctions List",
+        "FATF Grey List",
+        "UK Sanctions List"
+      ],
+      "raw_tokens": [
+        "Syria",
+        "Syria",
+        "Syria"
+      ]
+    },
+    {
+      "alpha2": "TZ",
+      "name": "Tanzania",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Tanzania"
+      ]
+    },
+    {
+      "alpha2": "UA",
+      "name": "Ukraine",
+      "sources": [
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Ukraine",
+        "Ukraine"
+      ]
+    },
+    {
+      "alpha2": "VE",
+      "name": "Venezuela",
+      "sources": [
+        "EU Sanctions List",
+        "FATF Grey List",
+        "UK Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Venezuela",
+        "Venezuela",
+        "Venezuela",
+        "Venezuela"
+      ]
+    },
+    {
+      "alpha2": "VN",
+      "name": "Vietnam",
+      "sources": [
+        "FATF Grey List"
+      ],
+      "raw_tokens": [
+        "Vietnam"
+      ]
+    },
+    {
+      "alpha2": "YE",
+      "name": "Yemen",
+      "sources": [
+        "EU Sanctions List",
+        "FATF Grey List",
+        "UK Sanctions List",
+        "UN Sanctions List",
+        "US OFAC Sanctions List"
+      ],
+      "raw_tokens": [
+        "Yemen",
+        "Yemen",
+        "Yemen",
+        "Yemen",
+        "Yemen"
+      ]
+    },
+    {
+      "alpha2": "ZA",
+      "name": "South Africa",
+      "sources": [
+        "FATF Grey List",
+        "UN Sanctions List"
+      ],
+      "raw_tokens": [
+        "South Africa",
+        "South Africa"
+      ]
+    },
+    {
+      "alpha2": "ZW",
+      "name": "Zimbabwe",
+      "sources": [
+        "EU Sanctions List",
+        "UK Sanctions List"
+      ],
+      "raw_tokens": [
+        "Zimbabwe",
+        "Zimbabwe"
+      ]
+    }
+  ],
+  "source_stats": {
+    "EU Sanctions List": {
+      "url": "https://www.sanctionsmap.eu/api/v1/sanctions",
+      "fetched_at": "2025-12-27T12:48:45.966171-05:00",
+      "parse_status": "fallback",
+      "raw_count": 19,
+      "matched_count": 19
+    },
+    "FATF Grey List": {
+      "url": "https://www.fatf-gafi.org/en/countries/black-and-grey-lists.html",
+      "fetched_at": "2025-12-27T12:48:46.78602-05:00",
+      "parse_status": "fallback",
+      "raw_count": 21,
+      "matched_count": 21
+    },
+    "Freedom House": {
+      "url": "https://freedomhouse.org/countries/freedom-net/scores",
+      "fetched_at": "2025-12-27T12:48:46.90504-05:00",
+      "parse_status": "no_data",
+      "raw_count": 0,
+      "matched_count": 0,
+      "error": "could not parse country data from HTML"
+    },
+    "OONI (Open Observatory of Network Interference)": {
+      "url": "https://ooni.org/countries/",
+      "fetched_at": "2025-12-27T12:48:45.965791-05:00",
+      "parse_status": "error",
+      "raw_count": 0,
+      "matched_count": 0,
+      "error": "failed to fetch: unexpected status code: 404"
+    },
+    "Reporters Without Borders (RSF)": {
+      "url": "https://rsf.org/en/index",
+      "fetched_at": "2025-12-27T12:48:47.065933-05:00",
+      "parse_status": "no_data",
+      "raw_count": 0,
+      "matched_count": 0
+    },
+    "UK Sanctions List": {
+      "url": "https://www.gov.uk/government/collections/financial-sanctions-regime-specific-consolidated-lists-and-releases",
+      "fetched_at": "2025-12-27T12:48:45.96614-05:00",
+      "parse_status": "success",
+      "raw_count": 30,
+      "matched_count": 30
+    },
+    "UN Sanctions List": {
+      "url": "https://www.un.org/securitycouncil/sanctions/information",
+      "fetched_at": "2025-12-27T12:48:46.629147-05:00",
+      "parse_status": "success",
+      "raw_count": 23,
+      "matched_count": 23
+    },
+    "US OFAC Sanctions List": {
+      "url": "https://home.treasury.gov/policy-issues/financial-sanctions/sanctions-programs-and-country-information",
+      "fetched_at": "2025-12-27T12:48:45.966112-05:00",
+      "parse_status": "success",
+      "raw_count": 22,
+      "matched_count": 22
+    }
+  },
+  "errors": [
+    "OONI (Open Observatory of Network Interference): failed to fetch: unexpected status code: 404",
+    "Freedom House: could not parse country data from HTML"
+  ]
+}

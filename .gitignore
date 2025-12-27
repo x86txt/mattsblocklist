@@ -1,0 +1,38 @@
+# Configuration with secrets
+config.yaml
+
+# Build output
+/bin/
+/dist/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage.out
+coverage.html
+
+# Temporary files
+*.tmp
+*.log
+
+# Project context and working notes
+CONTEXT.md
+unifi-api-discovery.md
+

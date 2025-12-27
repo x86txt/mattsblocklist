@@ -1,0 +1,57 @@
+# UniFi Region Blocking Country List
+# Version: 1.0.0
+# Last Modified: 2025-12-27 12:49:05 EST
+#
+# Aggregated list of countries subject to sanctions, export controls, or other restrictions from multiple authoritative sources. This list is intended for use with UniFi Network's Region Blocking (GeoIP Filtering) feature to block traffic from these countries.
+#
+# Country codes (ISO 3166-1 alpha-2)
+#
+AF
+AO
+BA
+BF
+BG
+BI
+BY
+CD
+CF
+CG
+CM
+CU
+ER
+ET
+GN
+GW
+HR
+HT
+IQ
+IR
+KE
+KP
+LB
+LR
+LY
+MC
+ML
+MM
+MV
+MZ
+NA
+NG
+NI
+PH
+RU
+RW
+SD
+SL
+SN
+SO
+SS
+SY
+TZ
+UA
+VE
+VN
+YE
+ZA
+ZW
