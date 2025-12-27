@@ -1,4 +1,4 @@
-# TAE - UniFi Region Blocking Automation Tool
+# MBL - Matt's Blocklist and UniFi Region Blocking Automation Tool
 
 Automated country blocklist aggregation and UniFi CyberSecure Region Blocking configuration.
 
@@ -44,7 +44,7 @@ go build -o bin/configure ./cmd/configure
 ### 2. Discover UniFi API Endpoints   
 
 >[!TIP]
-> You only need to run this if the configure stage below fails to find your API endpoints, we have pre-populated the most common endpoints into the code already.
+> You only need to run this if the apply to Unifi stage below fails to find your API endpoints, we have pre-populated the most common endpoints into the code as of the date of this release.
 
 ```bash
 # Set credentials via environment
@@ -152,9 +152,9 @@ Options:
 ### Environment Variables
 
 ```bash
-export UNIFI_HOST="https://10.5.22.1"
-export UNIFI_USERNAME="programmatic"
-export UNIFI_PASSWORD="your-secure-password"
+export UNIFI_HOST="https://ip.of.your.unifi.controller"
+export UNIFI_USERNAME="local.user.you.created"
+export UNIFI_PASSWORD="password.for.local.user"
 export UNIFI_SITE="default"
 export UNIFI_SKIP_TLS_VERIFY="true"
 export GITHUB_TOKEN="ghp_..."  # For GitHub integration
@@ -166,14 +166,14 @@ Copy `config.yaml.example` to `config.yaml`:
 
 ```yaml
 unifi:
-  host: "https://10.5.22.1"
-  username: "programmatic"
+  host: "https://ip.of.your.unifi.controller"
+  username: "local.user.you.created"
   password: "${UNIFI_PASSWORD}"
   site: "default"
   skip_tls_verify: true
 
 github:
-  repo: "mattsblocklist/tae"
+  repo: "x86txt/mattsblocklist"
   token: "${GITHUB_TOKEN}"
 ```
 
@@ -190,12 +190,12 @@ You can set up automated updates using cron to periodically refresh the blocklis
 # Update UniFi region blocking blocklist
 
 # Change to the directory containing the tools
-cd /path/to/tae
+cd /path/to/mattsblocklist
 
 # Set environment variables (or source from a file)
-export UNIFI_HOST="https://10.5.22.1"
-export UNIFI_USERNAME="programmatic"
-export UNIFI_PASSWORD="your-password-here"
+export UNIFI_HOST="https://ip.of.your.unifi.controller"
+export UNIFI_USERNAME="local.user.you.created"
+export UNIFI_PASSWORD="password.for.local.user"
 
 # Aggregate latest blocklist
 ./bin/aggregate --verbose 2>&1 | tee /var/log/unifi-blocklist-update.log
@@ -217,13 +217,13 @@ chmod +x update-blocklist.sh
 crontab -e
 
 # Add entry to run daily at 3 AM
-0 3 * * * /path/to/tae/update-blocklist.sh
+0 3 * * * /path/to/mattsblocklist/update-blocklist.sh
 
 # Or run twice daily (3 AM and 3 PM)
-0 3,15 * * * /path/to/tae/update-blocklist.sh
+0 3,15 * * * /path/to/mattsblocklist/update-blocklist.sh
 
 # Or run weekly (every Monday at 3 AM)
-0 3 * * 1 /path/to/tae/update-blocklist.sh
+0 3 * * 1 /path/to/mattsblocklist/update-blocklist.sh
 ```
 
 ### Advanced Setup with Error Handling
@@ -283,9 +283,9 @@ Store credentials in a `.env` file (add to `.gitignore`):
 
 ```bash
 # .env file (chmod 600)
-UNIFI_HOST="https://10.5.22.1"
-UNIFI_USERNAME="programmatic"
-UNIFI_PASSWORD="your-secure-password"
+UNIFI_HOST="https://ip.of.your.unifi.controller"
+UNIFI_USERNAME="local.user.you.created"
+UNIFI_PASSWORD="password.for.local.user"
 ```
 
 ```bash
@@ -321,7 +321,7 @@ tail -f /var/log/unifi-blocklist-update.log
 
 # Test cron syntax (runs the job in 1 minute)
 # Add this to crontab temporarily:
-* * * * * /path/to/tae/update-blocklist.sh
+* * * * * /path/to/mattsblocklist/update-blocklist.sh
 ```
 
 ### Recommended Schedule

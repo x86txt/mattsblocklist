@@ -1,0 +1,122 @@
+name: Package and Release Blocklist
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'data/blocked_countries.txt'
+      - 'data/blocked_countries.json'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to create releases
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for tags
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract version from JSON
+        id: extract_version
+        run: |
+          VERSION=$(jq -r '.version // "1.0.0"' data/blocked_countries.json)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Extracted version: $VERSION"
+
+      - name: Get last modified date
+        id: get_date
+        run: |
+          DATE=$(jq -r '.last_modified // empty' data/blocked_countries.json)
+          if [ -z "$DATE" ]; then
+            DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          fi
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+
+      - name: Get description
+        id: get_desc
+        run: |
+          DESC=$(jq -r '.description // "UniFi Region Blocking Country Blocklist"' data/blocked_countries.json)
+          echo "desc<<EOF" >> $GITHUB_OUTPUT
+          echo "$DESC" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Check if version already released
+        id: check_version
+        run: |
+          VERSION="${{ steps.extract_version.outputs.version }}"
+          if git rev-parse "v${VERSION}" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Tag v${VERSION} already exists"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Tag v${VERSION} does not exist, will create release"
+          fi
+
+      - name: Create package
+        if: steps.check_version.outputs.exists == 'false'
+        run: |
+          VERSION="${{ steps.extract_version.outputs.version }}"
+          mkdir -p dist
+          tar -czf "dist/blocked_countries-${VERSION}.tar.gz" \
+            -C data \
+            blocked_countries.txt blocked_countries.json
+          
+          # Create checksum
+          cd dist
+          sha256sum "blocked_countries-${VERSION}.tar.gz" > "blocked_countries-${VERSION}.tar.gz.sha256"
+          cd ..
+          
+          echo "Created package: dist/blocked_countries-${VERSION}.tar.gz"
+
+      - name: Create Git Tag
+        if: steps.check_version.outputs.exists == 'false'
+        run: |
+          VERSION="${{ steps.extract_version.outputs.version }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag -a "v${VERSION}" -m "Release v${VERSION}: Blocklist update"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push origin "v${VERSION}"
+
+      - name: Create GitHub Release
+        if: steps.check_version.outputs.exists == 'false'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.extract_version.outputs.version }}
+          name: Release v${{ steps.extract_version.outputs.version }}
+          body: |
+            ## Blocklist Release v${{ steps.extract_version.outputs.version }}
+            
+            ${{ steps.get_desc.outputs.desc }}
+            
+            **Last Modified:** ${{ steps.get_date.outputs.date }}
+            
+            ### Files Included
+            
+            - `blocked_countries.txt` - Simple text format (one ISO alpha-2 code per line)
+            - `blocked_countries.json` - Full data with source provenance
+            
+            ### Download
+            
+            Download the `blocked_countries-${{ steps.extract_version.outputs.version }}.tar.gz` archive containing both files.
+          files: |
+            dist/blocked_countries-${{ steps.extract_version.outputs.version }}.tar.gz
+            dist/blocked_countries-${{ steps.extract_version.outputs.version }}.tar.gz.sha256
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Skip release (version already exists)
+        if: steps.check_version.outputs.exists == 'true'
+        run: |
+          VERSION="${{ steps.extract_version.outputs.version }}"
+          echo "Version v${VERSION} already released, skipping..."
+
