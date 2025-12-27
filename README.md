@@ -41,13 +41,16 @@ go build -o bin/configure ./cmd/configure
 #   data/blocked_countries.json - Full data with provenance
 ```
 
-### 2. Discover UniFi API Endpoints
+### 2. Discover UniFi API Endpoints   
+
+>[!TIP]
+> You only need to run this if the configure stage below fails to find your API endpoints, we have pre-populated the most common endpoints into the code already.
 
 ```bash
 # Set credentials via environment
-export UNIFI_HOST="https://10.5.22.1"
-export UNIFI_USERNAME="programmatic"
-export UNIFI_PASSWORD="your-password"
+export UNIFI_HOST="https://ip.of.your.unifi.controller"
+export UNIFI_USERNAME="local.user.you.created"
+export UNIFI_PASSWORD="password.for.local.user"
 
 # Discover endpoints (focus on region blocking)
 ./bin/discover --insecure --region-only --output discovered.json
